@@ -1,4 +1,4 @@
-# JobPor]talDjango
+# JobPortalDjango
 
 
 ## How to use this project?
