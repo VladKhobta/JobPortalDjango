@@ -28,3 +28,11 @@ DB_NAME=your_db_name
 DB_USER=your_db_user
 DB_PASSWORD=your_db_password
 ```
+
+5. After all in project`s repo again:
+```
+.\venv\Scripts\activate
+python manage.py makemigrations
+python manage.py migrate
+python maange.py runserver
+```
