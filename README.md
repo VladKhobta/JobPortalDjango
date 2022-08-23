@@ -17,9 +17,14 @@ pip install psycopg2-binary
 pip install python-dotenv
 ```
 
-3. Add .env file in JobPortalDjango\ with this code:
+3. Open SQL Shell(psql) and after authentication run this code:
 ```
-DB_NAMEyour_db_name
+create database your_db_name
+```
+
+4. Add .env file in JobPortalDjango\ with this code:
+```
+DB_NAME=your_db_name
 DB_USER=your_db_user
 DB_PASSWORD=your_db_password
 ```
