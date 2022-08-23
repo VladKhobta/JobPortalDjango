@@ -5,7 +5,7 @@
 
 1. Fork/Clone
 
-1. Run terminal commands in project`s repo:
+1. Run this commands in project`s repo:
 ```
 python -m venv venv
 .\venv\Scripts\activate
@@ -15,6 +15,13 @@ pip install django-extensions
 pip install django-ckeditor 
 pip install psycopg2-binary 
 pip install python-dotenv
+```
+
+or just:
+```
+python -m venv venv
+.\venv\Scripts\activate
+pip install django-cors-headers djangorestframework django-extensions django-ckeditor psycopg2-binary python-dotenv
 ```
 
 3. Open SQL Shell(psql) and after authentication run this code:
