@@ -23,3 +23,8 @@ class CompanyView(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk):
+        company = get_object_or_404(Company.objects.all(), pk=pk)
+        company.delete()
+        return Response({"message": "Company with id `{}` has been deleted.".format(pk)}, status=204)
