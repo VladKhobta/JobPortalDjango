@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'JobPortal.apps.candidate',
     'JobPortal.apps.company',
     'JobPortal.apps.vacancy',
+    'JobPortal.apps.response',
 ]
 
 MIDDLEWARE = [
@@ -161,4 +162,5 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
     ]
+
 }

@@ -22,7 +22,7 @@ class Candidate(models.Model):
 
 
 class Resume(models.Model):
-    candidate = models.OneToOneField(Candidate, on_delete=models.CASCADE)
+    candidate = models.OneToOneField(Candidate, on_delete=models.CASCADE, primary_key=True)
 
     class Education(models.TextChoices):
         MIDDLE_SCHOOL = 'Middle school'
@@ -31,3 +31,6 @@ class Resume(models.Model):
 
     education = models.CharField(max_length=50, choices=Education.choices)
 
+
+# class Responses(models.Model):
+    # candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE)

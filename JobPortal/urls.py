@@ -22,4 +22,5 @@ urlpatterns = [
     path('api/v1/candidates/', include('JobPortal.apps.candidate.urls')),
     path('api/v1/companies/', include('JobPortal.apps.company.urls')),
     path('api/v1/vacancies/', include('JobPortal.apps.vacancy.urls')),
+    path('api/v1/responses/', include('JobPortal.apps.response.urls')),
 ]

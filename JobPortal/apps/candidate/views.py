@@ -2,13 +2,14 @@ from rest_framework.response import Response
 from rest_framework.generics import get_object_or_404
 from rest_framework.views import APIView
 from rest_framework import status
-from rest_framework.authtoken.views import ObtainAuthToken
-from rest_framework.authtoken.models import Token
 from .serializers import CandidateSerializer
 from .models import Candidate
+from .permissions import IsOwner
 
 
 class CandidateView(APIView):
+
+    permission_classes = [IsOwner]
 
     def get(self, request, pk):
         candidate = Candidate.objects.get(pk=pk)
