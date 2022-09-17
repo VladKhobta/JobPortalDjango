@@ -6,7 +6,7 @@ from ..company.models import Company
 
 
 class VacancySerializer(serializers.ModelSerializer):
-    company = serializers.SlugRelatedField(queryset=Company.objects.all(), slug_field='user_id')
+    # company_id = serializers.SlugRelatedField(queryset=Company.objects.all(), slug_field='user_id')
     company_designation = serializers.CharField(source='company.designation', read_only=True)
     created_at = serializers.DateField(read_only=True)
 

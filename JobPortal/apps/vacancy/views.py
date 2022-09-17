@@ -43,7 +43,7 @@ class VacancyListView(APIView):
             print(vacancies)
             serializer = VacancySerializer(vacancies, many=True)
             return Response({'vacancies': serializer.data})
-        vacancies = Vacancy.objects.filter(company=pk)
+        vacancies = Vacancy.objects.filter(company_id=pk)
         serializer = VacancySerializer(vacancies, many=True)
         return Response({'vacancies': serializer.data})
 
