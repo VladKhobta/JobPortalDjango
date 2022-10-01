@@ -11,6 +11,11 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ['id', 'email', 'phone_number', 'user_type', 'is_staff', 'date_joined', 'password']
 
+    def __init__(self, *args, **kwargs):
+        super(UserSerializer, self).__init__(*args, **kwargs)  # call the super()
+        for field in self.fields:  # iterate over the serializer fields
+            self.fields[field].error_messages['required'] = '%s field is required' % field  # set the custom error message
+
     def create(self, validated_data):
         vd = validated_data
         user = User.objects.create(

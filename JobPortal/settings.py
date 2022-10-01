@@ -161,6 +161,6 @@ APPEND_SLASH = False
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
-    ]
-
+    ],
+    'EXCEPTION_HANDLER': 'JobPortal.utils.exception_handlers.custom_exception_handler'
 }
